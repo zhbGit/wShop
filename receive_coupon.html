@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>微商城</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/index.css"/>
+	<link rel="stylesheet" href="css/mui.min.css">
+	<style type="text/css">
+		p.money {
+		        display: -webkit-inline-box;
+			    padding-top: 15px;
+			    color: #cb2527;
+			    margin-bottom: 5px;
+		}
+		.mui-table-view-cell .price-a span {
+		    margin-top: -15px;
+		}
+		p.lingqu {
+		    color: #cb2527;
+		    font-size: 1.0em;
+		    padding: 33px 0px;
+		}
+		.mui-table-view-cell .user {
+		    font-size: 0.8rem;
+		    color: #8f8f94;
+		}
+		.mui-table-view-cell .time {
+		    font-size: 0.8rem;
+		    color: #8f8f94;
+		}
+		.mui-table-view-cell .price-a p {
+		    font-size: 0.6rem;
+		}
+		.mui-table-view-cell {
+		    position: relative;
+		    overflow: hidden;
+		    padding: 10px 10px;
+		    -webkit-touch-callout: none;
+		}
+		.mui-table-view-cell .price-a {
+		    float: left;
+		    color: #333;
+		    border-right: 1px dotted #ddd;
+		    padding-right: 8px;
+		}
+	</style>
+	<style type="text/css">
+      /*尺寸适配1280*/
+      @media screen and (max-width: 1280px){
+		.mui-table-view-cell .price {
+			    padding-right: 380px;
+			}
+      }
+      /*苹果6p尺寸适配414x736*/
+      @media screen and (max-width: 736px){
+		.mui-table-view-cell .price {
+			    padding-right: 248px;
+			}
+      }
+      /*尺寸适配384x567*/
+      @media screen and (max-width: 567px){
+		.mui-table-view-cell .price {
+			    padding-right: 52px;
+			}
+      }
+
+      /*苹果6/6s尺寸适配 375x667*/
+      @media screen and (max-width: 375px){
+		.mui-table-view-cell .price {
+			    padding-right: 38px;
+			}
+      }
+
+     /*苹果4尺寸适配320x480  5s尺寸 320x568 */
+      @media screen and (max-width: 320px){
+	    .mui-table-view-cell .price {
+			    padding-right: 10px;
+			}
+      }
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">领取优惠券</h1>
+	</header>
+	<div class="mui-content">
+		<div id="slider" class="mui-slider mui-fullscreen">
+			<div id="pullrefresh" class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<div class="mui-input-row mui-checkbox">
+								<div class="price-a">
+						   			<p class="money">￥<span>10</span></p>
+						   			<p>全场满100元减10元</p>
+						   			<p>有效时间：2016.01.01-2016.01.31</p>
+						   		</div>
+						   		<div class="text" style="margin-top: 0px;">
+						   		    <a href="package.html">
+						   			    <p class="lingqu">立即领取</p>
+						   			</a>
+						   		</div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<div class="mui-input-row mui-checkbox">
+								<div class="price-a">
+						   			<p class="money">￥<span>10</span></p>
+						   			<p>全场满100元减10元</p>
+						   			<p>有效时间：2016.01.01-2016.01.31</p>
+						   		</div>
+						   		<div class="text" style="margin-top: 0px;">
+						   			<p class="lingqu">立即领取</p>
+						   		</div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell gray">
+							<div class="mui-input-row mui-checkbox">
+								<div class="price-a">
+						   			<p class="money">￥<span>10</span></p>
+						   			<p>全场满100元减10元</p>
+						   			<p>有效时间：2016.01.01-2016.01.31</p>
+						   		</div>
+						   		<div class="text" style="margin-top: 0px;">
+						   			<p class="lingqu">已领取完</p>
+						   		</div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell gray">
+							<div class="mui-input-row mui-checkbox">
+								<div class="price-a">
+						   			<p class="money">￥<span>10</span></p>
+						   			<p>全场满100元减10元</p>
+						   			<p>有效时间：2016.01.01-2016.01.31</p>
+						   		</div>
+						   		<div class="text" style="margin-top: 0px;">
+						   			<p class="lingqu">已领取完</p>
+						   		</div>
+							</div>
+						</li>
+					</ul>
+			</div>
+		</div>
+	</div>
+	<script src="js/mui.min.js"></script>
+	<script src="js/mui.pullToRefresh.js"></script>
+	<script src="js/mui.pullToRefresh.material.js"></script>
+	<script>
+		mui.init();
+		(function($) {
+			//阻尼系数
+			var deceleration = mui.os.ios?0.003:0.0009;
+			$('.mui-scroll-wrapper').scroll({
+				bounce: false,
+				indicators: true, //是否显示滚动条
+				deceleration:deceleration
+			});
+			$.ready(function() {
+				//循环初始化所有下拉刷新，上拉加载。
+				$.each(document.querySelectorAll('.mui-scroll-wrapper .mui-scroll'), function(index, pullRefreshEl) {
+					$(pullRefreshEl).pullToRefresh({
+						/*down: {
+							callback: function() {
+								var self = this;
+								setTimeout(function() {
+									var ul = self.element.querySelector('.mui-table-view');
+									ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+									self.endPullDownToRefresh();
+								}, 1000);
+							}
+						},*/
+						up: {
+							callback: function() {
+								var self = this;
+								setTimeout(function() {
+									var ul = self.element.querySelector('.mui-table-view');
+									ul.appendChild(createFragment(ul, index, 5));
+									self.endPullUpToRefresh();
+								}, 1000);
+							}
+						}
+					});
+				});
+				var createFragment = function(ul, index, count, reverse) {
+					var length = ul.querySelectorAll('li').length;
+					var fragment = document.createDocumentFragment();
+					var li;
+					for (var i = 0; i < count; i++) {
+						li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '第' + (index + 1) + '个选项卡子项-' + (length + (reverse ? (count - i) : (i + 1)));
+						fragment.appendChild(li);
+					}
+					return fragment;
+				};
+			});
+		})(mui);
+	</script>
+</body>
+</html>

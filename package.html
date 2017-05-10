@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+    <meta charset="UTF-8"/> 
+    <title>微商城</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>  
+    <meta name="apple-itunes-app" content="app-id=927873366"/> 
+    <meta name="apple-mobile-web-app-capable" content="yes"/> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/> 
+    <meta name="location" content="province=;city=;coord="/> 
+    <meta name="format-detection" content="telephone=no"/> 
+    <link rel="stylesheet" type="text/css" href="css/m2015.css"/> 
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/> 
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+    <script src="js/zepto.min.js" type="text/javascript"></script> 
+    <script src="js/main.js" type="text/javascript"></script> 
+    <script src="js/swiper.min.js" type="text/javascript"></script> 
+    <script src="js/mui.min.js"></script>
+    <style>.hot-news-roller dt{width:75px;}.hot-news-roller dd{margin-right:0;}.hot-news-roller dd ul li i{display:inline-block;border:solid 1px #f44623;color:#f44623;height:18px;line-height:18px;padding:0 5px;border-radius:5px;margin-right:5px;font-size:12px;}
+    </style>
+    <style type="text/css">
+      /*尺寸适配1280*/
+      @media screen and (max-width: 1280px){
+        .star_tatle a {
+                margin: 2px 10px;
+            }
+        textarea{
+                width: 92%;
+        }
+      }
+      /*苹果6p尺寸适配414x736*/
+      @media screen and (max-width: 736px){
+        .star_tatle a {
+                margin: 2px 7px;
+            }
+        textarea{
+                width: 90%;
+        }
+      }
+      /*尺寸适配384x567*/
+      @media screen and (max-width: 567px){
+        .star_tatle a {
+                margin: 2px 3px;
+            }
+        textarea{
+                width: 86%;
+        }
+      }
+
+      /*苹果6/6s尺寸适配 375x667*/
+      @media screen and (max-width: 375px){
+        .star_tatle a {
+                margin: 2px 3px 2px 3px;
+            }
+        textarea{
+                width: 85%;
+        }
+      }
+
+     /*苹果4尺寸适配320x480  5s尺寸 320x568 */
+      @media screen and (max-width: 320px){
+        .star_tatle a {
+                margin: 2px;
+            }
+        textarea{
+                width: 82%;
+        }
+      }
+    </style> 
+</head> 
+<body> 
+    <header class="headerBar"> 
+        <div class="topbar"> 
+            <a href="javascript:history.back();"><i class="iconfont icon-back"></i></a> 
+            <h1 class="page_title">春节大扫除套餐</h1> 
+        </div> 
+    </header>
+    <div class="content">  
+        <div class="banner"> 
+            <a href="details_page.html"><img src="images/banner_2.jpg"/></a>
+        </div>
+        <div class="number">
+            <i class="iconfont icon-map"></i>
+            <dt class="renshu">配送地址：
+                <p class="choice">王先生</p>
+                <p class="choice">请选择服务地址<img src="images/arrow.png"></p>
+            </dt>
+        </div>
+        <div class="number">
+            <i class="iconfont icon-gifts"></i>
+            <dt class="renshu">服务套餐：
+                <p class="choice">请选择服务地址<img src="images/arrow.png"></p>
+            </dt>
+            <ul class="service_plan">
+                <h2>基础套餐（必选）:</h2>
+                <a onclick="switchTag('tag1');this.blur();">
+                    <li id="tag1">
+                        <p class="set">458元</p>
+                        <p class="daxiao">90㎡及以下</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag2');this.blur();">
+                    <li class="" id="tag2">
+                        <p class="set">658元</p>
+                        <p class="daxiao"> 90-120㎡（含）</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag3');this.blur();">
+                    <li class="" id="tag3">
+                        <p class="set">888元</p>
+                        <p class="daxiao">120-160㎡（含）</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag4');this.blur();">
+                    <li class="" id="tag4">
+                        <p class="set">988元</p>
+                        <p class="daxiao">160-200㎡（含）</p>
+                    </li>
+                </a>
+            </ul> 
+            <ul class="service_plan">
+                <h2>专项服务（可选且可多选）:</h2>
+                <a onclick="switchTag('tag1');this.blur();">
+                    <li id="tag1">
+                        <p class="special">不选择</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag2');this.blur();">
+                    <li class="" id="tag2">
+                        <p class="set">沙发保养</p>
+                        <p class="daxiao">7座及以下</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag3');this.blur();">
+                    <li class="" id="tag3">
+                        <p class="set">木地板打蜡</p>
+                        <p class="daxiao">50㎡以下</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag4');this.blur();">
+                    <li class="" id="tag4">
+                        <p class="set">地毯清洗</p>
+                        <p class="daxiao">50㎡以下</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag5');this.blur();">
+                    <li class="" id="tag5">
+                        <p class="special">水晶灯清洗</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag6');this.blur();">
+                    <li class="" id="tag6">
+                        <p class="special">消毒柜清洗</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag7');this.blur();">
+                    <li class="" id="tag7">
+                        <p class="special">衣物收纳</p>
+                    </li>
+                </a>
+            </ul>
+            <ul class="service_plan">
+                <h2>配送类产品（可选且可多选）</h2>
+                <a onclick="switchTag('tag1');this.blur();">
+                    <li  id="tag1">
+                        <p class="special">不选择</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag2');this.blur();">
+                    <li class="" id="tag2">
+                        <p class="set">45元/5KG</p>
+                        <p class="daxiao">泰象王大米</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag3');this.blur();">
+                    <li class="" id="tag3">
+                        <p class="set">85.9元/5KG</p>
+                        <p class="daxiao">香纳兰茉莉香米</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag4');this.blur();">
+                    <li class="" id="tag4">
+                        <p class="set">72.8元/5L</p>
+                        <p class="daxiao">多力葵花籽油</p>
+                    </li>
+                </a>
+                <a onclick="switchTag('tag5');this.blur();">
+                    <li class="" id="tag5">
+                        <p class="set">135.9元/5L</p>
+                        <p class="daxiao">鲁花5S压榨一级花生油</p>
+                    </li>
+                </a>
+            </ul>  
+        </div>
+    </div> 
+    <div class="number">
+        <i class="iconfont icon-clock"></i>
+        <dt class="renshu">服务时间： 
+            <select id="pid" class="prov" title="41" onchange="hidedpid()"><option value="0">请选择服务时间段</option><option value="53">选择时间</option><option value="52">不选择时间</option></select>
+        </dt>
+    </div>
+    <div class="package">
+        <p class="money">套餐价:<span class="amount">**</span>元</p>
+        <p class="price">优惠价:<span class="amount">**</span>元</p>
+    </div>
+    <div class="number">
+        <a href="coupon.html">
+            <i class="iconfont icon-discount"></i>
+            <dt class="renshu">商城优惠券：
+                <p class="choice">请选择优惠券<img src="images/arrow.png"></p>
+            </dt>
+        </a>
+        <div class="row mui-input-row" style="margin-bottom: 58px;">
+            <textarea id="question" class="mui-input-clear question" placeholder="亲,可以把您的其他需求留言给我们哦!"></textarea>
+        </div>
+    </div> 
+    <div class="foot-nav border_top hide" style=""> 
+        <div class="more">
+            <p class="amount">总计：￥<span class="money">0.00</span></p>
+        </div>
+        <div class="place_order">
+            <a href="member_order_detail.html">
+                <p>提交订单</p>
+            </a>              
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(".foot-nav").show();$(".foot-nav a").eq(0).addClass("cur");$(".search-btn").tap(function () {$(".index_search").show();$("#s_inputbox").focus();$("body").css({overflow:"hidden",height:$(window).height()});});function closeSearch() {$(".index_search").hide();$("body").css({overflow:"auto",height:"auto" });}
+        function scrollUp(tag,height,timer) {tag.each(function () {var ul =$(this).find("ul");setInterval(function () {ul.animate({marginTop:-height },"normal",function () {ul.find("li:first").clone().appendTo(ul);ul.find("li:first").remove();ul.css({marginTop:0 });});},timer);});};scrollUp($(".notice-roller"),40,3000);$(function () {var UArea ={pid:"3363",zid:"3364",did:"3365",dname:"泉州"};if (Cookie.Get("seted") =="1") {$("#cityName").html(Cookie.Get("dnamec"));} else if (Cookie.ISCookie()) {var cityName =Cookie.Get('dnamec');var cityId =Cookie.Get('cityid');if (cityName ==null ||cityName =="" ||cityId ==null) {if (navigator.geolocation) {var watchInterval =navigator.geolocation.getCurrentPosition(getPositionSuccess,getPositionError,{timeout:15000,maximumAge:0 });}
+        else {setDefual();}
+        function getPositionSuccess(position) {var lat =position.coords.latitude;var lng =position.coords.longitude;$.post("js/getarea.ashx",{"act":"myAddress","lat":lat,"lng":lng },function (data) {if (data.stats ==1) {$("#cityName").html(data.cityname);var times =24 *300;Cookie.Set('pidc',data.pidc,times);Cookie.Set('zidc',data.zidc,times);Cookie.Set('didc',data.didc,times);Cookie.Set('cityid',data.cityid,times);Cookie.Set('dnamec',data.cityname,times);Cookie.Set('ischecked',"1",times);Cookie.Set('hasshop',data.hasShop,times);}
+        },"json");}
+        function getPositionError(error) {setDefual();}
+        }
+        else {$("#cityName").html(cityName);}
+        }
+        else {setDefual();}
+        function setDefual() {$("#cityName").html(UArea.dname);var times =24 *300;Cookie.Set('pidc',UArea.pid,times);Cookie.Set('zidc',UArea.zid,times);Cookie.Set('didc',UArea.did,times);Cookie.Set('cityid',UArea.did,times);Cookie.Set('dnamec',UArea.dname,times);Cookie.Set('ischecked',"1",times);Cookie.Set('hasshop',"false",times);}
+        $("#btnSerach").click(function () {var txt =strFilter1($("#s_inputbox").val());var url =txt =="" ?"brandlist.aspx" :("/search?wordkey=" + encodeURI(txt));window.location.href =url;});var flag =false;$("#s_inputbox").focus(function () {$(this).trigger("keyup");});$("#s_inputbox").keyup(function () {if (flag) {$("#cls").hide();$(".two").removeClass("two").addClass("one");}
+        flag =true;var txt =strFilter1($("#s_inputbox").val());$.ajax({url:"ajax/ajaxOperate.aspx?act=ajaxsearch",data:{w:txt,t:Math.random() },type:"get",dataType:"json",success:function (d) {var html ="";if (d.result ==1) {for (var i =0;i < d.info.length;i++) {html +='<li><a href="search?wordkey=' + d.info[i].name + '&pId=' + d.info[i].productId + '">' + d.info[i].name + '</a></li>';}
+        $("#s_list_box ul").html(html);$("#s_list_box").show();}
+        },error:function () {}
+        });});$("#s_inputbox").keypress(function (e) {if (e.keyCode ==13) {$("#btnSerach").click();} });function clsRecord() {$.post("ajax/ajaxoperate.aspx?act=clearSearcheContent",{},function () {$('#s_list_box').hide();},"text");}
+        });function closeDownad() {$(".downad").hide();Cookie.Set("downad",1,30 *24);}
+        $(document).on("click","a",function () {if ($(this).attr("href") !="#" &&$(this).attr("href") !="" &&$(this).attr("href").indexOf("javascript") ==-1 &&$(this).attr("href").indexOf("tel") ==-1) {layer.closeAll();}
+        });
+    </script>  
+</body>
+</html>

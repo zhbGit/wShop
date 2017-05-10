@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8"/> 
+    <title>微商城</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>  
+    <meta name="apple-itunes-app" content="app-id=927873366"/> 
+    <meta name="apple-mobile-web-app-capable" content="yes"/> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/> 
+    <meta name="location" content="province=;city=;coord="/> 
+    <meta name="format-detection" content="telephone=no"/> 
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css"/> 
+    <link rel="stylesheet" type="text/css" href="css/m2015.css"/> 
+    <link rel="stylesheet" href="css/mui.min.css">
+    <script src="js/mui.min.js"></script>
+    <style type="text/css">
+        /*尺寸适配1280*/
+        @media screen and (max-width: 1280px){
+            span.clock p {
+                    margin-left: 12px;
+                }
+            .date-tit-a {
+                    width: 90.33333%;
+                }
+        }
+        /*苹果6p尺寸适配414x736*/
+        @media screen and (max-width: 736px){
+            span.clock p {
+                    margin-left: 10px;
+                }
+            .date-tit-a {
+                    width: 92.33333%;
+                }
+        }
+        /*尺寸适配384x567*/
+        @media screen and (max-width: 567px){
+            span.clock p {
+                    margin-left: 6px;
+                }
+            .date-tit-a {
+                    width: 83.33333%;
+                }
+        }
+
+        /*苹果6/6s尺寸适配 375x667*/
+        @media screen and (max-width: 375px){
+            span.clock p {
+                    margin-left: 6px;
+                }
+            .date-tit-a {
+                    width: 86.33333%;
+                }
+        }
+
+        /*苹果4尺寸适配320x480  5s尺寸 320x568 */
+        @media screen and (max-width: 320px){
+            span.clock p {
+                    margin-left: 5px;
+                }
+                .date-tit-a {
+                    width: 83.33333%;
+                }
+        }
+        </style>
+</head> 
+<body> 
+    <header class="headerBar"> 
+        <div class="topbar"> 
+            <a href="javascript:history.back();"><i class="iconfont icon-back"></i></a> 
+            <h1 class="page_title">钟点保洁</h1> 
+        </div> 
+    </header>
+    <div class="content">  
+        <div class="star_tatle">
+            <a href="">
+                <p class="star">三星级</p>
+                <p class="vip-a">会&nbsp&nbsp&nbsp员：￥20.00</p>
+                <p>非会员：￥24.00</p>
+            </a>
+            <a href="">
+                <p class="star">四星级</p>
+                <p class="vip-a">会&nbsp&nbsp&nbsp员：￥27.00</p>
+                <p>非会员：￥33.00</p>
+            </a>
+            <a href="" class="on active">
+                <p class="star">五星级</p>
+                <p class="vip-a">会&nbsp&nbsp&nbsp员：￥36.00</p>
+                <p>非会员：￥43.00</p>
+            </a>           
+        </div>
+        <div class="xiaotiao"></div>
+        <div class="service-time-tit">
+            <ul class="time-tit">
+                <li class="service-time">
+                    <i class="iconfont icon-gerenzhongxin"></i>
+                    <span>服务人数：</span>
+                    <span class="txt"> 
+                        <button type="button" class="decrease" onclick="changenum(1789,-1)">-</button>
+                        <input class="num" type="text" min="1" max="1000" name="goods_number[1789]" id="goods_number_1789" value="1" size="4" onkeyup="changenum(1789,0)">
+                        <button type="button" class="increase" onclick="changenum(1789,1)">+</button>                            
+                    </span>
+                </li>
+                <li class="service-time">
+                    <i class="iconfont icon-clock"></i>
+                    <span>服务时长:</span>
+                    <span class="txt"> 
+                        <button type="button" class="decrease" onclick="changenum(1789,-1)">-</button>
+                        <input class="num" type="text" min="1" max="1000" name="goods_number[1789]" id="goods_number_1789" value="1" size="4" onkeyup="changenum(1789,0)">
+                        <button type="button" class="increase" onclick="changenum(1789,1)">+</button>                            
+                    </span>
+                </li>
+                <li class="date-tit">
+                    <div class="baokuan floor">
+                        <div class="bk-slide"> 
+                            <div class="swiper-wrapper"> 
+                                <i class="houtui">
+                                   <i class="iconfont icon-back"></i>
+                                </i>
+                                <div class="date-tit-a">
+                                    <div class="date">
+                                        <div class="date-tit-b">
+                                            <span class="date-a xz-ing">
+                                                <p class="xingqi">今天</p>
+                                                <p class="riqi">01月21日</p>
+                                            </span>
+                                            <span class="date-a">
+                                                <p class="xingqi">明天</p>
+                                                <p class="riqi">01月22日</p>
+                                            </span>
+                                            <span class="date-a">
+                                                <p class="xingqi">周一</p>
+                                                <p class="riqi">01月23日</p>
+                                            </span>
+                                            <span class="date-a">
+                                                <p class="xingqi">周二</p>
+                                                <p class="riqi">01月24日</p>
+                                            </span>
+                                            <span class="date-a">
+                                                <p class="xingqi">周三</p>
+                                                <p class="riqi">01月25日</p>
+                                            </span>
+                                            <span class="date-a">
+                                                <p class="xingqi">周四</p>
+                                                <p class="riqi">01月26日</p>
+                                            </span>
+                                            <span class="date-a">
+                                                <p class="xingqi">周五</p>
+                                                <p class="riqi">01月27日</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="going">
+                                    <i class="iconfont icon-more"></i>
+                                </i>
+                            </div> 
+                        </div> 
+                    </div>
+                </li>
+                <li class="timepiece">
+                    <span class="clock"><p class="ing">8:00-10:00</p></span>
+                    <span class="clock"><p class="ing">10:00-12:00</p></span>
+                    <span class="clock"><p class="ing">8:00-10:00</p></span>
+                    <span class="clock"><p class="ing">10:00-12:00</p></span>
+                    <span class="clock"><p class="ing">8:00-10:00</p></span>
+                    <span class="clock"><p class="ing">10:00-12:00</p></span>
+                    <span class="clock"><p class="ing">8:00-10:00</p></span>
+                    <span class="clock"><p class="ing">10:00-12:00</p></span>
+                    <span class="clock"><p class="go active">13:00-15:00</p></span>
+                    <span class="clock"><p class="go active">15:00-17:00</p></span>
+                    <span class="clock"><p class="go">13:00-15:00</p></span>
+                    <span class="clock"><p class="go">15:00-17:00</p></span>
+                    <span class="clock"><p class="go">13:00-15:00</p></span>
+                    <span class="clock"><p class="go">15:00-17:00</p></span>
+                    <span class="clock"><p class="go">13:00-15:00</p></span>
+                    <span class="clock"><p class="go">15:00-17:00</p></span>
+                </li>
+                <li class="service-time">
+                    <i class="iconfont icon-shoucang"></i>
+                    <dt class="eeee">
+                        <select id="pid" class="prov" title="41" onchange="hidedpid()"><option value="0">不选择，则默认推荐大姐进行服务</option><!-- <option value="53">选择时间</option><option value="52">不选择时间</option> --></select>
+                    </dt>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="footerBar mui-bar mui-bar-tab">
+        <a href="acknowledgement_of_order.html">
+            <p class="order">提交订单</p>
+        </a>
+    </nav>
+    <script>
+        function changenum(rec_id,diff){
+                    var num = parseInt(document.getElementById('goods_number_'+rec_id).value);
+                    var goods_number = num + Number(diff);
+                    if( goods_number >= 1){
+                        document.getElementById('goods_number_'+rec_id).value = goods_number;
+                    }
+        }
+        
+        function change_goods_number_response(result)
+        {    
+          if (result.error == 0)
+          {
+          var rec_id = result.rec_id;
+            document.getElementById('total_number').innerHTML = result.total_number;//更新数量
+            document.getElementById('goods_subtotal').innerHTML = result.total_desc;//更新小计
+            if (document.getElementById('ECS_CARTINFO'))
+            {//更新购物车数量
+            document.getElementById('ECS_CARTINFO').innerHTML = result.cart_info;
+            }
+          }
+        else if (result.message != '')
+          {
+          alert(result.message);
+          }                
+        }
+  </script>   
+</body>
+</html>

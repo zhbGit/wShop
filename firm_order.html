@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>微商城</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!--标准mui.css-->
+	<link rel="stylesheet" href="css/mui.min.css">
+	<!--App自定义的css-->
+	<link rel="stylesheet" type="text/css" href="css/app.css"/>
+	<link rel="stylesheet" type="text/css" href="css/m2015.css">
+	<style type="text/css">
+		nav.mui-bar.mui-bar-tab.footerBar ,html{
+		    background-color: #fff;
+		}
+		.address {
+		    height: 80px;
+		    padding-top: 28px;
+		}
+		dt.go {
+		    margin-top: 4px;
+		    margin-left: 32px;
+		}
+		.address i{
+		    line-height: 0px;
+		}
+		p.people {
+		    padding-left: 32px;
+		    color: #555;
+		    margin-top: -40px;
+		}
+		p.from {
+		    line-height: 18px;
+		    padding-right: 20px;
+		}
+		span.mui-icon.mui-icon-arrowright {
+		    float: right;
+		    color: #ddd;
+		}
+		li span.mui-icon.mui-icon-arrowright{
+		    float: right;
+		    margin-top: -26px;
+		    color: #ddd;
+		    font-size: 20px
+		}
+		.mui-slider-handle {
+		    padding: 10px;
+		    border-bottom: 1px solid #eee;
+		    padding-bottom: 38px
+		}
+		img.mui-media-object.mui-pull-left {
+		    width: 70px;
+		}
+		p.mui-ellipsis {
+		    padding: 2px 10px;
+		    color: #555;
+		}
+		.mui-ellipsis{
+			white-space: normal;
+		}
+		p.guige {
+		    padding: 0px 10px;
+		    overflow: hidden;
+		    font-size: 12px;
+		    color: #999;
+		}
+		span.point {
+		    margin-left: -5px;
+		    font-size: 18px;
+		}
+		.xiaotiao {
+		    background-color: #f9f9f9;
+		}
+		button.decrease,button.increase {
+		    border: 1px solid #eee;
+		    background-color: #f9f9f9;
+		    border-radius: 14px;
+		}
+		input#goods_number_1789{
+			background-color: #f9f9f9;
+		}
+		span.mui-icon.mui-icon-settings {
+		    font-size: 20px;
+		    padding: 5px 10px;
+		}
+		li.service-time span{
+		    color: #555;
+		}
+		li.service-time i {
+		    color: #555;
+		    font-size: 20px;
+		    padding: 0px 10px;
+		    float: left;
+		}
+		li.service-time p{
+		    line-height: 30px
+		}
+		li.service-time span.active{
+			background: #ffa935;
+            color: #fff;
+		}
+		.row.mui-input-row span {
+		    padding-left: 10px;
+		    font-size: 24px;
+		    padding-top: 8px;
+		    padding-right: 8px;
+		}
+		p{
+		    color: #555;
+		}
+		.mui-content{
+			margin-bottom: 100px;
+		}
+		textarea#question{
+			margin-bottom: 10px;
+		}
+		.mui-input-row {
+		    border-bottom: 1px solid #eee;
+		}
+		span.txt{
+			margin-top: 1px;
+		}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">确认订单</h1>
+	</header>
+	<div class="mui-content">
+        <div class="clearfloat">
+            <div class="address">
+                <a href="">
+                    <i class="iconfont icon-map"></i>
+                    <p class="people">收货人：<span class="name-a">林小姐</span><span class="number">18826262626</span></p>
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                    <dt class="go">
+                       <p class="from">收货地址：<span>田安路幸福花园5#301田安路幸福花园5#301</span></p>  
+                    </dt>
+                </a>
+            </div>
+        </div>
+        <div class="xiaotiao"></div>
+        <div class="mui-slider-handle">
+			<img class="mui-media-object mui-pull-left" src="images/aaa.jpg">
+			<div class="mui-media-body">
+				<p class="mui-ellipsis">金穗.太象王 干饭 籼米 泉州 5kg</p>
+				<p class="guige">5kg 非真空包装</p>
+				<p class="o-t-price">
+		            <span class="major">￥</span>
+		            <span class="point">48.00</span>
+		        </p>
+		        <p class="shuliang">
+		            <span class="one">*1</span>
+		        </p>
+			</div>
+		</div>
+		<div class="service-time-tit">
+            <ul class="time-tit">
+                <li class="service-time">
+                    <span class="mui-icon mui-icon-settings"></span>
+                    <span>购买数量：</span>
+                    <span class="txt"> 
+                        <button type="button" class="decrease" onclick="changenum(1789,-1)">-</button>
+                        <input class="num" type="text" min="1" max="1000" name="goods_number[1789]" id="goods_number_1789" value="1" size="4" onkeyup="changenum(1789,0)">
+                        <button type="button" class="increase" onclick="changenum(1789,1)">+</button>                            
+                    </span>
+                </li>
+                <li class="service-time">
+                    <i class="iconfont icon-clock"></i>
+                    <p>期望配送时间:<span class="riqi">2017-02-02</span></p>
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                    <div class="ps-time">
+                        <span class="morning">上午</span>
+                        <span class="afternoon active">下午</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="row mui-input-row">
+            <P><span class="mui-icon mui-icon-chatbubble"></span>给卖家留言：</P>
+            <textarea id="question" class="mui-input-clear question" placeholder="亲,可以把您的其他需求留言给我们哦!"></textarea>
+        </div>
+        <p class="jiashou">商品重量5kg(5kg以内配送费起步价3元，每增加1公斤加收0.5元配送费)</p>
+        <div class="peisongfei">
+        	<p>配送费：<span class="psf">￥3.00</span></p>
+        	<p class="heji">合计：<span class="all-money">￥51.00</span></p>
+        </div>
+	</div>
+	<nav class="mui-bar mui-bar-tab footerBar">
+		    <p class="order-money">合计：<span class="money-hwo">￥51.00</span></p>
+	    <a href="#">
+		    <div class="firm_order">提交订单</div>
+	    </a>
+	</nav>
+</body>
+<script>
+    function changenum(rec_id,diff){
+        var num = parseInt(document.getElementById('goods_number_'+rec_id).value);
+        var goods_number = num + Number(diff);
+        if( goods_number >= 1){
+            document.getElementById('goods_number_'+rec_id).value = goods_number;
+        }
+    }
+    
+    function change_goods_number_response(result)
+    {    
+        if (result.error == 0)
+        {
+            var rec_id = result.rec_id;
+	        document.getElementById('total_number').innerHTML = result.total_number;//更新数量
+	        document.getElementById('goods_subtotal').innerHTML = result.total_desc;//更新小计
+	        if (document.getElementById('ECS_CARTINFO'))
+	        {//更新购物车数量
+	        document.getElementById('ECS_CARTINFO').innerHTML = result.cart_info;
+            }
+        }
+        else if (result.message != '')
+        {
+            alert(result.message);
+        }                
+    }
+</script> 
+<script src="js/mui.min.js"></script> 
+</html>

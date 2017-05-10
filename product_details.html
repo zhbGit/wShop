@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>微商城</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="css/layer.css">
+	<link rel="stylesheet" href="css/icons-extra.css">
+	<style>
+		html,
+		body {
+			background-color: #efeff4;
+		}
+		
+		.mui-bar .mui-pull-left .mui-icon {
+			padding-right: 5px;
+			font-size: 28px;
+		}
+		
+		.mui-bar .mui-btn {
+			font-weight: normal;
+			font-size: 17px;
+		}
+		
+		.mui-bar .mui-btn-link {
+			top: 1px;
+		}
+		.mui-content{
+			margin-bottom: 46px;
+		}
+		.mui-content img{
+			width: 100%;
+		}
+		.hm-description{
+			margin: .5em 0 2em;
+		}
+		
+		.hm-description>li {
+			font-size: 14px;
+			color: #8f8f94;
+		}
+		a.mui-icon-extra.mui-icon-extra-cart.mui-pull-right {
+		    font-size: 24px;
+		    position: relative;
+		    z-index: 20;
+		    color: #666;
+		    padding-top: 22px;
+		}	
+		a.mui-icon.mui-icon-left-nav.mui-pull-left	{
+			font-size: 24px;
+		    position: relative;
+		    z-index: 20;
+		    color: #666;
+			text-align: center;
+		}
+		span.mui-icon.mui-icon-star{
+			font-size: 28px;
+		    padding-left: 8px;
+		    color: #666
+		}
+		span.mui-icon.mui-icon-star-filled {
+		    color: #ff5000;
+		    font-size: 28px;
+		    padding-left:8px;
+		}
+		.mui-bar-tab{
+			background-color: #f7f7f7;
+			height:50px;
+		}
+		.mui-bar-tab .mui-tab-item{
+			color: #929292
+		}
+		.mui-bar-tab .mui-tab-item .mui-icon{
+			top: 0px;
+		}
+		.mui-bar-tab .mui-tab-item.mui-active{
+			color: #ffa935
+		}
+		.mui-bar .mui-title{
+			color: #ffa935
+		}
+		span.mui-badge {
+		    font-size: 10px;
+		    line-height: 1.4;
+		    position: absolute;
+		    top: 4px;
+		    left: 100%;
+		    margin-left: -12px;
+		    padding: 1px 5px;
+		    color: #fff;
+		    background: #ffa935;
+		}
+		.mui-scroll{
+			padding: 0px;
+			position: relative;
+		}
+		.mui-scroll-wrapper {
+		    position: relative;
+		    border-top: 8px solid #eee;
+		    border-bottom: 1px solid #eee;
+		}
+		.mui-slider-indicator {
+			position: absolute;
+		}
+		.mui-slider-indicator.mui-segmented-control{
+			padding: 0px;
+			border-top:8px solid #eee;
+			border-bottom: 1px solid #eee
+		}
+		.mui-content-padded {
+		    padding-left: 5px;
+		}
+		input#goods_number_1789 {
+		    width: 60px;
+		    height: 32px;
+		    text-align: -webkit-center;
+		    border: 1px solid #ededed;
+		    line-height: 30px;
+		    margin-top: 5px;
+		    margin-bottom: 14px;
+		    color: #051b28;
+		    border-radius: 0px;
+		}
+		button.decrease,button.increase {
+		    width: 32px;
+		    border-radius: 0px;
+		    height: 32px;
+		    margin-top: 5px;
+		    margin-bottom: 14px;
+		    color: #051b28;
+		    text-align: center;
+		}
+		span.txt {
+		    margin-left: 25px;
+		}
+		td, th {
+		    padding: 10px;
+		    border: 1px solid #eee;
+		}
+	</style>
+</head>
+<body class="mui-ios mui-ios-7 mui-ios-7-0">
+	<header id="header" class="mui-bar mui-bar-transparent">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">商品详情</h1>
+		<a class="mui-icon-extra mui-icon-extra-cart mui-pull-right" href="shopping_cart.html"><span class="mui-badge">2</span></a>
+	</header>
+	<div class="mui-content">
+		<div id="slider" class="mui-slider" >
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/ddd.jpg">
+					</a>
+				</div>
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/aaa.jpg">
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/bbb.jpg">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/ccc.jpg">
+					</a>
+				</div>
+				<!-- 第四张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/ddd.jpg">
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/aaa.jpg">
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+		<div class="title_top">
+			<div class="title_share">
+			    <h1>金穗 ·泰象王 干饭 籼米 福建泉州 5kg</h1>
+			</div>
+			<div class="shoucang">
+			    <a href=""><span class="mui-icon mui-icon-star"></span></a>
+				<a class="active" style="display:none;"><span class="mui-icon mui-icon-star-filled"></span></a>
+				<p>收藏</p>
+			</div>
+		</div>
+		<div class="d-price">
+		    <div class="present-price">
+		        <p class="o-t-price">
+		            <span class="major">￥</span>
+		            <span class="point">48.00</span>
+		        </p>
+		        <p class="price-a">
+		            <span class="fr">销量1925件</span>
+		        </p>
+		    </div>
+		</div>
+		<div class="d-choosedsku">
+            <a href="javascript:test()">
+                <p class="titleMain">请选择 产品规格 数量
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                </p>
+            </a> 
+        </div>
+        <div class="choosedsku">
+	        <p class="fanwei">服务范围：仅支持泉州市区（丰泽区、鲤城区、洛江区）</p> 
+        </div>
+        <div class="choosedsku">
+	        <div class="chooseds">
+		        <p class="pingjia">商品评价（88）</p> 
+	        </div>
+	        <div class="rate_single">
+	            <ul class="">
+	                <li>
+	                    <div class="user-info">
+	                        <span class="img"><img src="images/toux.jpg"></span>
+	                        <span class="name">水**子  2017.1.10</span>
+	                        <span class="level"></span>
+	                    </div>
+	                    <div class="rate-list">
+	                        <p>大米很好吃！</p>
+	                        <p class="rate-sku-info">重量:5kg;  包装:真空包装</p>
+	                    </div>
+	                </li>
+	            </ul>
+	        </div>
+	        <div class="mui-content-padded">
+	            <a href="evaluate.html">
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">
+						查看更多评价
+					</button>
+				</a>
+			</div>
+	    </div>
+	    <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+			<div class="mui-scroll">
+				<a class="mui-control-item mui-active" href="#item1mobile">
+					图文详情
+				</a>
+				<a class="mui-control-item" href="#item2mobile">
+					产品参数
+				</a>
+			</div>
+		</div>
+		<div id="item1mobile" class="mui-control-content mui-active">
+			<div id="scroll1" class="mui-scroll-wrapper">
+		        <div class="mui-scroll">
+				    <img src="images/eee.jpg">
+		        	<img src="images/fff.jpg">
+		        	<img src="images/ccc.jpg">
+		        	<img src="images/ggg.jpg">
+		        	<img src="images/hhh.jpg">
+		        	<img src="images/iii.jpg">
+		        	<img src="images/jjj.jpg">
+		        	<img src="images/kkk.jpg">
+		        	<img src="images/lll.jpg">
+		        	<img src="images/mmm.jpg">
+		        	<img src="images/nnn.jpg">
+				</div>
+			</div>
+		</div>
+		<div id="item2mobile" class="mui-control-content">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<table width="100%" border="1" cellspacing="0" cellpadding="2" bordercolor="#666">
+		                <tbody>
+		                    <tr>
+		                        <td>净&nbsp重&nbsp量</td><td>5kg</td>
+		                    </tr>
+		                    <tr>
+		                        <td>包装方式</td><td>非真空包装</td>
+		                    </tr>
+		                    <tr>
+		                        <td>产&nbsp&nbsp&nbsp&nbsp地</td><td>泉州</td>
+		                    </tr>
+		                    <tr>
+		                        <td>品&nbsp&nbsp&nbsp&nbsp牌</td><td>金穗.泰象王</td>
+		                    </tr>
+		                    <tr>
+		                        <td>系&nbsp&nbsp&nbsp&nbsp列</td><td>籼米</td>
+		                    </tr>
+		                    <tr>
+		                        <td>规&nbsp&nbsp&nbsp&nbsp格</td><td>5kg</td>
+		                    </tr>
+		                    <tr>
+		                        <td>售卖方式</td><td>单品</td>
+		                    </tr>
+		                </tbody>
+	                </table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="mui-bar mui-bar-tab footerBar">
+	    <div class="dianpu">
+	        <a href="">
+	        	<img src="images/dianpu.png">
+	        	<p>商城</p>
+	        </a>
+	    </div>
+	    <div class="xiaoxi">
+	        <a href="">
+	            <img src="images/xiaoxi.png">
+	        	<p>客服</p>
+	        </a>
+	    </div>
+	    <a href="javascript:test()">
+	        <div class="car">加入购物车</div>
+	    </a>
+	    <a href="javascript:test()">
+		    <div class="buy">
+		        立即购买
+		    </div>
+	    </a>
+	</nav>
+	<script src="js/mui.min.js"></script>
+	<script src="js/layer.js"></script>
+	<script type="text/javascript">
+		function test(){
+			layer.open({
+			    type: 1
+			    ,content: '<div class="sku-img"><p><img src="images/ddd.jpg"></p><a id="icon-close" class="" href=""><span class="mui-icon mui-icon-close"></span></a></div><div class="sku-pro-info"><p class="h">￥192.08</p><p class="sku-txt"><span class="c-sku">重量:2.5kg</span><span class="unc-sku">包装：非真空包装</span></p></div><div class="sku-info"><h2>尺码</h2><ul><li class="sel">2.5kg</li><li class="normal">5kg</li></ul></div><div class="sku-info-a"><h2>包装</h2><ul><li class="normal">真空包装</li><li class="sel">非真空包装</li></ul></div><div class="mui-content-padded"><h2>购买数量</h2><span class="txt"><button type="button" class="decrease" onclick="changenum(1789,-1)">-</button><input class="num" type="text" min="1" max="1000" name="goods_number[1789]" id="goods_number_1789" value="1" size="4" onkeyup="changenum(1789,0)"><button type="button" class="increase" onclick="changenum(1789,1)">+</button></span><nav class="mui-bar mui-bar-tab footerBar"><a href=""><div class="car-a">加入购物车</div></a><a href=""><div class="buy-a">立即购买</div></a></nav>'
+			    ,anim: 'up'
+			    ,style: 'position:fixed; bottom:0; left:0; width: 100%; height: 400px; padding:10px 0; border:none;'
+			  });
+		}
+
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+
+        function changenum(rec_id,diff){
+                    var num = parseInt(document.getElementById('goods_number_'+rec_id).value);
+                    var goods_number = num + Number(diff);
+                    if( goods_number >= 1){
+                        document.getElementById('goods_number_'+rec_id).value = goods_number;
+                    }
+        }
+        
+        function change_goods_number_response(result)
+        {    
+          if (result.error == 0)
+          {
+          var rec_id = result.rec_id;
+            document.getElementById('total_number').innerHTML = result.total_number;//更新数量
+            document.getElementById('goods_subtotal').innerHTML = result.total_desc;//更新小计
+            if (document.getElementById('ECS_CARTINFO'))
+            {//更新购物车数量
+            document.getElementById('ECS_CARTINFO').innerHTML = result.cart_info;
+            }
+          }
+        else if (result.message != '')
+          {
+          alert(result.message);
+          }                
+        }
+  </script>   
+</body>
+</html>

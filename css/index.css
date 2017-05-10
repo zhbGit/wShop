@@ -1,0 +1,168 @@
+.mui-bar~.mui-content .mui-fullscreen {
+    top: 44px;
+    height: auto;
+}
+.mui-pull-top-tips {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    z-index: 1;
+}
+.mui-bar~.mui-pull-top-tips {
+    top: 24px;
+}
+.mui-pull-top-wrapper {
+    width: 42px;
+    height: 42px;
+    display: block;
+    text-align: center;
+    background-color: #efeff4;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background-clip: padding-box;
+    box-shadow: 0 4px 10px #bbb;
+    overflow: hidden;
+}
+.mui-pull-top-tips.mui-transitioning {
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
+.mui-pull-top-tips .mui-pull-loading {
+    /*-webkit-backface-visibility: hidden;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;*/
+    
+    margin: 0;
+}
+.mui-pull-top-wrapper .mui-icon,
+.mui-pull-top-wrapper .mui-spinner {
+    margin-top: 7px;
+}
+.mui-pull-top-wrapper .mui-icon.mui-reverse {
+    /*-webkit-transform: rotate(180deg) translateZ(0);*/
+}
+.mui-pull-bottom-tips {
+    text-align: center;
+/*    background-color: #ffa935;*/
+    font-size: 15px;
+    line-height: 40px;
+    color: #333;
+}
+.mui-pull-top-canvas {
+    overflow: hidden;
+    background-color: #fafafa;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px #bbb;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+.mui-pull-top-canvas canvas {
+    width: 40px;
+}
+.mui-slider-indicator.mui-segmented-control {
+    background-color: #fff;
+}
+/*优惠卷*/
+.gray{ 
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);  
+    filter: grayscale(100%);
+    filter: gray;
+}
+.cc-mask{
+    position: relative;
+    background: #fff none repeat scroll 0% 0%;
+}
+.cc-mask{
+    opacity: 0.6;
+}
+
+.mui-table-view-cell{
+    background: url(../images/yhq.png) no-repeat;
+    background-size: 100% 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.mui-table-view-cell.yhq a{
+    color: #000;
+}
+.mui-table-view-cell .price{
+    width: 40%;
+    text-align: center;
+    float: left;
+    color: #333;
+}
+.mui-table-view-cell .price-a{
+    width: 72%;
+    float: left;
+    color: #333;
+}
+.mui-table-view-cell .price span{
+    color: #cb2527;
+    font-size: 2rem;
+    display: block;
+    padding-top: 3px;
+}
+.mui-table-view-cell .price-a span{
+    color: #cb2527;
+    font-size: 2rem;
+    display: block;
+    padding-top: 10px;
+}
+.mui-table-view-cell .price p{
+    font-size: 12px;
+    margin-top: -8px;
+    line-height: 24px;
+}
+.mui-table-view-cell .price-a p{
+    font-size: 12px;
+    margin-top: -3px;
+    line-height: 24px;
+}
+.text p {
+    margin-top: 7px;
+}
+.mui-table-view-cell .text{
+    float: left;
+}
+.mui-table-view-cell .info{
+    color: #cb2527;
+    margin-top: 5px;
+}
+.mui-table-view-cell .user{
+    font-size: 12px;
+    color: #333;
+}
+.mui-table-view-cell .time{
+    font-size: 12px;
+    color: #333;
+}
+.mui-table-view-cell .text{
+    float: left;
+    margin-top: -5px;
+    padding-left: 10px;
+}
+.mui-slider .mui-slider-group .mui-slider-item .gy-pic{
+    position: absolute;
+    padding-top: 10px;
+    left: 30%;
+}
+.mui-slider .mui-slider-group .mui-slider-item .gy-pic img{
+    border: 0;
+    border: none;
+    width: 80%;
+}
+.mui-table-view-cell .price span {
+    padding-bottom: 5px;
+}
+p.shiyong {
+    font-size: 14px;
+    color: #cb2527;
+}

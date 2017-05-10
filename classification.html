@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>微商城</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="css/icons-extra.css">
+	<link rel="stylesheet" type="text/css" href="css/m2015.css"/> 
+	<style>
+		.mui-pull-top-canvas canvas {
+			width: 40px;
+		}
+		.mui-slider-indicator.mui-segmented-control {
+			padding: 0px;
+			border-bottom: solid 1px #eeeeee;
+		}
+		.mui-segmented-control.mui-scroll-wrapper .mui-control-item {
+		    display: inline-block;
+		    width: auto;
+		    padding: 0 20px;
+		    border: 0;
+		    color: #051b28;
+		}
+		.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+		    color: #ffa935;
+		    background-color:unset;
+		    border-bottom: 2px solid #ffa935;
+		}
+		.mui-fullscreen .mui-segmented-control~.mui-slider-group{
+			top: 67px;
+		}
+		.mui-table-view{
+			margin-top: 0px;
+		}
+		.mui-table-view.mui-grid-view{
+			padding: 0px;
+		}
+		.mui-table-view:after,.mui-table-view:before{
+			background-color: unset;
+		}
+		li.mui-table-view-cell.mui-media {
+		    border-bottom: 1px solid #eee;
+		    width: 50%;
+		    float: left;
+		}
+		.mui-scroll{
+			padding: 0px;
+		}
+		.mui-table-view .mui-media-object {
+		    border-radius: 0px;
+		}
+		.mui-segmented-control.mui-scroll-wrapper .mui-control-item {
+		    line-height: 35px;
+		}
+		.mui-bar-nav{
+			background-color: #f6f6f6;
+			box-shadow:none;
+		}
+		.mui-bar-nav.mui-bar .mui-icon{
+			color: #333;
+		}
+		input[type=search]{
+			width: 92%;
+		}
+		.clearfloat{
+			padding: 0px;
+		}
+		.mui-table-view-cell>a:not(.mui-btn) {
+		    padding:5px 10px;
+		}
+		.mui-table-view-cell.mui-collapse .mui-table-view .mui-table-view-cell {
+		    padding-left: 15px;
+		}
+		.mui-table-view-chevron .mui-table-view-cell {
+		    padding-right: 25px;
+		}
+		.mui-table-view-cell.mui-collapse.mui-active {
+		    margin-top: 0px; 
+		}
+		.mui-table-view-cell.mui-active {
+		    background-color: #fff;
+		}
+		.title {
+		    margin-top: 10px;
+		    margin-left: 10px;
+		    color: #676b70;
+		}
+		.mui-navigate-right:after, .mui-push-right:after {
+		    right: 10px;
+		    font-size: 18px;
+		}
+		span.View {
+		    color: #676b70;
+		    float: right;
+		}
+	</style>
+</head>
+<body>
+    <div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+		<!--菜单部分-->
+		<aside id="offCanvasSide" class="mui-off-canvas-right">
+			<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+			    <div class="price">
+					<div class="title">价格区间（元）
+					    <p class="rate"><input type="text" placeholder="最低价"><span>-</span><input type="text" placeholder="最高价"></p>
+					</div>
+				</div>
+				<div class="scroll">
+					<div class="title">品牌<i>:</i><span class="selected">品牌1</span></div>
+                    <p class="brand active">品牌1</p>
+                    <p class="brand">品牌2</p>
+                    <p class="brand">品牌3</p>
+                    <p class="brand">品牌4</p>
+                    <p class="brand">品牌5</p>
+                    <p class="brand">品牌6</p>
+                    <p class="brand">品牌7</p>
+                    <p class="brand">品牌8</p>
+				</div>
+			</div>
+			<nav class="mui-bar mui-bar-tab footerBar">
+			    <div class="czhi">重置</div>
+				<div class="qued">确定</div>
+			</nav>
+		</aside>
+		<div class="mui-inner-wrap">
+			<header class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<div class="mui-content-padded">
+					<div class="mui-input-row mui-search">
+						<input type="search" class="mui-input-clear" placeholder="">
+					</div>
+				</div>
+			</header>
+			<div class="mui-content">
+				<div id="slider" class="mui-slider mui-fullscreen">
+					<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<div class="mui-scroll">
+							<a class="mui-control-item mui-active" href="#item1mobile">
+								推荐
+							</a>
+							<a class="mui-control-item" href="#item2mobile">
+								水果
+							</a>
+							<a class="mui-control-item" href="#item3mobile">
+								蔬菜
+							</a>
+							<a class="mui-control-item" href="#item4mobile">
+								肉类
+							</a>
+						</div>
+					</div>
+					<div class="menu-list clearfloat am-sharetwo">
+						<ul class="yiji">
+							<!-- <li class="slided">
+								<a href="#topPopover" class="inactive inactives">综合排序<i></i></a>
+								<ul style="overflow: hidden; display: none;">
+									<li><a href="#">价格从高到低</a></li> 
+									<li><a href="#">价格从低到高</a></li> 
+									<li><a href="#">信用排序</a></li> 
+								</ul>
+							</li> -->
+							<li class="mui-table-view-cell mui-collapse"><a class="mui-navigate-right" href="#">综合排序</a>
+								<ul class="mui-table-view mui-table-view-chevron">
+									<li class="mui-table-view-cell"><a class="mui-navigate-right" href="#">价格从高到低</a>
+									</li>
+									<li class="mui-table-view-cell"><a class="mui-navigate-right" href="#">价格从低到高</a>
+									</li>
+									<li class="mui-table-view-cell"><a class="mui-navigate-right" href="#">信用排序</a>
+									</li>
+								</ul>
+							</li>
+							<li class="slided">
+								<a href="#" class="inactive">销量优先</a>
+							</li>
+							<li class="slided">
+								<a id="offCanvasBtn" href="#offCanvasSide" class="inactive"><span class="mui-icon-extra mui-icon-extra-filter"></span>筛选</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-slider-group">
+						<div id="item1mobile" class="mui-control-content mui-active">
+							<div id="scroll1" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<ul class="mui-table-view mui-grid-view">
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_1.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+													   <span class="View">销量：123</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_1.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+													    <span class="View">销量：123</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_1.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_1.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_1.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_1.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div id="item2mobile" class="mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<ul class="mui-table-view mui-grid-view">
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_2.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_2.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_2.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_2.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_2.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_2.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div id="item3mobile" class="mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<ul class="mui-table-view mui-grid-view">
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_3.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_3.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_3.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_3.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_2.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_2.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div id="item4mobile" class="mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<ul class="mui-table-view mui-grid-view">
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_4.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_4.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_4.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_4.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_2.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+								        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+								            <a href="#">
+								                <img class="mui-media-object" src="images/p_2.jpg">
+								                <div class="mui-media-body">
+								                    <p class="shangpin">进口新鲜 猕猴桃 特惠装1*6</p>
+								                    <p>
+								                       <span class="View_details">￥15.80</span>
+								                    </p>
+								                </div>
+								            </a>
+								        </li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<div class="mui-off-canvas-backdrop"></div>
+		</div>
+	</div>
+	<script src="js/mui.min.js"></script>
+    <script src="js/mui.pullToRefresh.js"></script>
+	<script src="js/mui.pullToRefresh.material.js"></script>
+    <script>
+		mui.init();
+		(function($) {
+			//阻尼系数
+			var deceleration = mui.os.ios?0.003:0.0009;
+			$('.mui-scroll-wrapper').scroll({
+				bounce: false,
+				indicators: true, //是否显示滚动条
+				deceleration:deceleration
+			});
+			$.ready(function() {
+				//循环初始化所有下拉刷新，上拉加载。
+				$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+					$(pullRefreshEl).pullToRefresh({
+						down: {
+							callback: function() {
+								var self = this;
+								setTimeout(function() {
+									var ul = self.element.querySelector('.mui-table-view');
+									ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+									self.endPullDownToRefresh();
+								}, 1000);
+							}
+						},
+						up: {
+							callback: function() {
+								var self = this;
+								setTimeout(function() {
+									var ul = self.element.querySelector('.mui-table-view');
+									ul.appendChild(createFragment(ul, index, 5));
+									self.endPullUpToRefresh();
+								}, 1000);
+							}
+						}
+					});
+				});
+				var createFragment = function(ul, index, count, reverse) {
+					var length = ul.querySelectorAll('li').length;
+					var fragment = document.createDocumentFragment();
+					var li;
+					for (var i = 0; i < count; i++) {
+						li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '第' + (index + 1) + '个选项卡子项-' + (length + (reverse ? (count - i) : (i + 1)));
+						fragment.appendChild(li);
+					}
+					return fragment;
+				};
+			});
+		})(mui);
+	</script>
+</body>
+
+</html>

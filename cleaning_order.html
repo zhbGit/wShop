@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8"/> 
+    <title>微商城</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>  
+    <meta name="apple-itunes-app" content="app-id=927873366"/> 
+    <meta name="apple-mobile-web-app-capable" content="yes"/> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/> 
+    <meta name="location" content="province=;city=;coord="/> 
+    <meta name="format-detection" content="telephone=no"/> 
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css"/> 
+    <link rel="stylesheet" type="text/css" href="css/m2015.css"/> 
+    <link rel="stylesheet" href="css/mui.min.css">
+    <script src="js/zepto.min.js" type="text/javascript"></script> 
+    <script src="js/main.js" type="text/javascript"></script> 
+    <script src="js/mui.min.js"></script>
+    <style type="text/css">
+        .mui-slider-indicator{
+            background-color: #f9f9f9;
+        }
+    </style>
+</head> 
+<body> 
+    <header class="headerBar"> 
+        <div class="topbar"> 
+            <a href="javascript:history.back();"><i class="iconfont icon-back"></i></a> 
+            <h1 class="page_title">钟点保洁</h1> 
+        </div> 
+    </header>
+    <div class="content">  
+        <div class="bannerbox"> 
+            <div class="banner"> 
+                <ul> 
+                    <li><a href=""><img src="images/fwzs_meitu_1.jpg"/></a></li> 
+                    <li><a href=""><img src="images/fwzs_meitu_2.jpg"/></a></li>
+                    <li><a href=""><img src="images/fwzs_meitu_3.jpg"/></a></li>  
+                </ul> 
+                <div class="ban-nav">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div> 
+            </div> 
+        </div>
+        <script>$(".banner").css({height:$(".banner").width()/640*240 });$('.banner').swipeSlide({continuousScroll:true,speed:3000,transitionType:'cubic-bezier(0.22, 0.69, 0.72, 0.88)'
+          },function (i) {$('.ban-nav').children().eq(i).addClass('cur').siblings().removeClass('cur');});$("#s_inputbox").css({width:$(window).width()-90});function clearHistory() {$.get("",function (res) {if (res.status ==1) {$(".search-history p").html('<a href="javascript:;">暂无搜索历史...</a>');}
+          });}
+        </script>
+        <div class="clearfloat">
+            <div class="address">
+                <a href="">
+                    <i class="iconfont icon-map"></i>
+                    <dt class="go">
+                       <p class="from">请选择服务地址<img src="images/arrow.png"></p>
+                    </dt>
+                </a>
+            </div>
+        </div>
+        <div class="mui-content">
+            <div class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <!-- 额外增加的一个节点(循环轮播：最后一条数据) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <ul class="mui-table-view mui-table-view-chevron">
+                            <li class="mui-table-view-cell mui-media">
+                                <a href="">
+                                    <img class="mui-media-object mui-pull-left" src="images/renyuan.jpg">
+                                    <div class="mui-media-body">
+                                        哒哒哒1
+                                        <p class="star-on">
+                                            <span class="mui-icon mui-icon-star-filled"></span> 
+                                                <span class="mui-icon mui-icon-star-filled"></span> 
+                                                <span class="mui-icon mui-icon-star-filled"></span> 
+                                                <span class="mui-icon mui-icon-star-filled"></span> 
+                                                <span class="mui-icon mui-icon-star"></span> 
+                                        </p>
+                                        <p class='mui-ellipsis'>10岁 工龄 4年3个月</p>
+                                        <div class="vip">
+                                            <div class="vip-e">
+                                                <p>￥37.80/小时</p>
+                                            </div>
+                                            <p>￥45.20/小时</p>
+                                            <p class="module">
+                                                <span class="details">详情</span>
+                                                <span class="collect">收藏</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <!-- 分页开始-->
+                    <div class="mui-slider-item">
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <ul class="mui-table-view mui-table-view-chevron">
+                                <li class="mui-table-view-cell mui-media">
+                                    <a href="">
+                                        <img class="mui-media-object mui-pull-left" src="images/renyuan.jpg">
+                                        <div class="mui-media-body">
+                                            哒哒哒1
+                                            <p class="star-on">
+                                                <span class="mui-icon mui-icon-star-filled"></span> 
+                                                <span class="mui-icon mui-icon-star-filled"></span> 
+                                                <span class="mui-icon mui-icon-star-filled"></span> 
+                                                <span class="mui-icon mui-icon-star"></span> 
+                                                <span class="mui-icon mui-icon-star"></span> 
+                                            </p>
+                                            <p class='mui-ellipsis'>10岁 工龄 4年3个月</p>
+                                            <div class="vip">
+                                                <div class="vip-e">
+                                                    <p>￥37.80/小时</p>
+                                                </div>
+                                                <p>￥45.20/小时</p>
+                                                <p class="module">
+                                                    <span class="details">详情</span>
+                                                    <span class="collect">收藏</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+                      
+                    
+                    <!-- 分页结束-->
+                    <!-- 额外增加的一个节点(循环轮播：到第一条数据) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <ul class="mui-table-view mui-table-view-chevron">
+                                <li class="mui-table-view-cell mui-media">
+                                    <a href="">
+                                        <img class="mui-media-object mui-pull-left" src="images/renyuan.jpg">
+                                        <div class="mui-media-body">
+                                            哒哒哒1
+                                            <p class="star-on">
+                                                <span class="mui-icon mui-icon-star-filled"></span> 
+                                                <span class="mui-icon mui-icon-star-filled"></span> 
+                                                <span class="mui-icon mui-icon-star-filled"></span> 
+                                                <span class="mui-icon mui-icon-star"></span> 
+                                                <span class="mui-icon mui-icon-star"></span> 
+                                            </p>
+                                            <p class='mui-ellipsis'>10岁 工龄 4年3个月</p>
+                                            <div class="vip">
+                                                <div class="vip-e">
+                                                    <p>￥37.80/小时</p>
+                                                </div>
+                                                <p>￥45.20/小时</p>
+                                                <p class="module">
+                                                    <span class="details">详情</span>
+                                                    <span class="collect">收藏</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="mui-slider-indicator">
+                    <span class="mui-action mui-action-previous mui-icon mui-icon-back"></span>
+                    <div class="mui-number">
+                        <span>1</span> / 4
+                    </div>
+                    <span class="mui-action mui-action-next mui-icon mui-icon-forward"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="footerBar mui-bar mui-bar-tab">
+        <a href="cleaning_order_one.html">
+            <p class="order">使用推荐阿姨</p>
+        </a>
+    </nav> 
+</body>
+</html>
